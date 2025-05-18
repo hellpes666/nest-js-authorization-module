@@ -31,4 +31,5 @@ volumes:
   potgres_data:
   redis_data:
 
-networks: backend
+networks:
+  backend:
