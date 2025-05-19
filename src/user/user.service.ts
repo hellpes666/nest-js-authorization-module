@@ -37,14 +37,7 @@ export class UserService {
 			},
 		});
 
-		// Возможно не нужно
-		if (!user) {
-			throw new NotFoundException(
-				'Пользователь не найден. Пожалуйста, проверьте введённые данные. ',
-			);
-		}
-
-		return user;
+		return user as User;
 	}
 
 	async create(dto: CreateUserDto): Promise<User> {

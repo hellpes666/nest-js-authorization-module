@@ -12,12 +12,13 @@ services:
         ports:
             - 5433:5432
         volumes:
-            - potgres_data:/var/lib/postgresql/data
+            - postgres_data:/var/lib/postgresql/data
         networks:
             - backend
+
     redis:
-        container_name: auth_redis
-        image: redis:5.0
+        container_name: redis
+        image: redis:6.0
         restart: always
         ports:
             - 6379:6379
@@ -28,7 +29,7 @@ services:
             - backend
 
 volumes:
-    potgres_data:
+    postgres_data:
     redis_data:
 
 networks:
