@@ -15,7 +15,7 @@ model User {
     password String
 
     displayName String  @map("display_name")
-    picture     String?
+    pictureUrl     String? @map("picture_url")
 
     role UserRole @default(REGULAR)
 
